@@ -1,6 +1,6 @@
 # Frontend Mentor - Audiophile e-commerce website
 
-![Design preview for the Audiophile e-commerce website coding challenge](src/assets/preview.jpg)
+![Design preview for the Audiophile e-commerce website coding challenge](https://github.com/Fran3103/audiophile-ecommerce/blob/main/src/assets/preview.jpg?raw=true)
 
 ## Welcome! 👋
 
@@ -101,5 +101,6 @@ The more specific you are with your questions the more likely it is that another
 We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
 
 **Have fun building!** 🚀
-#   a u d i o p h i l e - e c o m m e r c e  
+#   a u d i o p h i l e - e c o m m e r c e 
+ 
  
