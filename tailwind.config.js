@@ -15,7 +15,8 @@ export default {
         orangeHover:'#fbaf85',
         white:'#ffffff',
         black: '#000000',
-        transparent: 'rgba(0,0,0,0)'
+        transparent: 'rgba(0,0,0,0)',
+        greyTransparent: 'rgba(0,0,0,0.7)'
 
       }, 
       fontFamily: {
