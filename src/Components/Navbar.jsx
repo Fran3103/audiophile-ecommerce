@@ -13,7 +13,7 @@ const Navbar = () => {
 
     const activar = () => setActivo(!activo)
   return (
-    <div className='w-screen m-auto fixed top-0  z-[100]'>
+    <div className='w-screen m-auto fixed top-0  bg-black z-[100]'>
         <nav className='bg-transparent p-7 m-auto  w-screen  max-w-[1100px]'>
             <div className='flex justify-between items-center max-w-3xl m-auto lg:hidden  w-full '>
                 <img src={menu} alt="menu" className='w-5 cursor-pointer' onClick={activar}/>

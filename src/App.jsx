@@ -4,6 +4,7 @@ import Home from "./Components/Home"
 import Earphones from "./Components/Home/category/Earphones"
 import Headphones from "./Components/Home/category/Headphones"
 import Speakers from "./Components/Home/category/Speakers"
+import Footer from "./Components/Home/Footer"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/headphones" element={<Headphones/>}/>
         <Route path="/speakers" element={<Speakers/>}/>
       </Routes>
+      <Footer/>
     </>
   )
 }
