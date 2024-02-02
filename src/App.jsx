@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/earphones" element={<Earphones/>}/>
-        <Route path="/Headphones" element={<Headphones/>}/>
+        <Route path="/headphones" element={<Headphones/>}/>
         <Route path="/speakers" element={<Speakers/>}/>
       </Routes>
     </>

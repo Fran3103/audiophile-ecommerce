@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
 
             <div className={activo ? 'absolute top-20 left-0 duration-700 transition-all ease-in-out': ' duration-700 hidden'}>
-                <Menu/>
+                <Menu  activar={activar}/>
             </div>
           
             <div className='hidden lg:flex justify-between items-center max-w-7xl m-auto'>
