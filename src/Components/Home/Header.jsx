@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='w-screen relative m-auto '>
-        <img src={imgDesktop} alt="desktop" className='hidden lg:flex w-full max-w-[1600px] m-auto' />
+    <div className='w-screen relative m-auto  max-w-fit'>
+        <img src={imgDesktop} alt="desktop" className='hidden lg:flex w-full  m-auto' />
         <div className=' m-auto max-w-[1100px]  w-full h-full lg:pl-5 '>
             <div className='  m-auto  '>
                 <img src={imgMobile} alt="mobile" className='md:hidden' />

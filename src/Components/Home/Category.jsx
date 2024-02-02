@@ -12,7 +12,7 @@ const Category = () => {
             <img src={headphones} alt="herdphones" className='w-36 -mt-24 md:-mt-32 md:w-44 lg:w-56' />
             <h2 className='text-black font-font font-bold md:-mt-5'>HEADPHONES</h2>
             <Link className='flex gap-4 justify-center items-center text-grey font-font font-bold uppercase mt-3'> 
-                    <h4 className='text-xs' >shop</h4>
+                    <h3 className='text-xs' >shop</h3>
                     <img src={arrow} alt="arrow" className='w-2 h-3' />
             </Link>
        
@@ -22,7 +22,7 @@ const Category = () => {
             <img src={speakers} alt="speakers"  className='w-36 -mt-24 md:w-44 lg:w-56'/>
             <h2 className='text-black font-font font-bold md:-mt-5'>SPEAKERS</h2>
             <Link className='flex gap-4 justify-center items-center text-grey font-font font-bold uppercase mt-3'> 
-                    <h4 className='text-xs'>shops</h4>
+                    <h3 className='text-xs'>shops</h3>
                     <img src={arrow} alt="arrow" />
             </Link>
        
@@ -32,7 +32,7 @@ const Category = () => {
             <img src={earphones} alt="earphones" className='w-36 -mt-24 md:w-44 lg:w-56' />
             <h2 className='text-black font-font font-bold md:-mt-5'   >EARPHONES</h2>
             <Link className='flex gap-4 justify-center items-center text-grey font-font font-bold uppercase mt-3'> 
-                    <h4 className='text-xs'>shops</h4>
+                    <h3 className='text-xs'>shops</h3>
                     <img src={arrow} alt="arrow" />
             </Link>
        

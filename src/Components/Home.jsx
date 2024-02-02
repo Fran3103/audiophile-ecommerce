@@ -1,4 +1,6 @@
+import BestGear from "./Home/BestGear"
 import Category from "./Home/Category"
+import Footer from "./Home/Footer"
 import Header from "./Home/Header"
 import Yx1Earphones from "./Products/Yx1Earphones"
 import Zx7Speaker from "./Products/Zx7Speaker"
@@ -13,6 +15,8 @@ const Home = () => {
         <Zx9Speaker/>
         <Zx7Speaker/>
         <Yx1Earphones/>
+        <BestGear/>
+        <Footer/>
     </>
   )
 }
