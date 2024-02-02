@@ -5,7 +5,7 @@ import tw from '../../assets/shared/desktop/icon-twitter.svg'
 import insta from '../../assets/shared/desktop/icon-instagram.svg'
 const Footer = () => {
   return (
-    <div className=' bg-black text-white pb-8 '>
+    <div className=' bg-black text-white pb-8  '>
         <div className='flex flex-col w-[327px]  md:w-[689px] lg:relative lg:w-full lg:max-w-[1100px] max-w-fit m-auto justify-center items-center lg:items-start gap-7 text-center'>
                 <hr className='text-orange border-[2px] w-24 m-auto md:m-0 lg:block hidden' />
             <div className='flex flex-col gap-4 w-full lg:flex-row lg:justify-between '>
