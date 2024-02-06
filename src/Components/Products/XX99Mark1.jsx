@@ -142,7 +142,7 @@ const XX99Mark1 = () => {
                     
                         <h2 className="text-base  uppercase font-bold ">zx9 speaker</h2>
                         
-                        <Link  to='/zx9speaker'> <button className='px-4 py-2 md:text-[7px] bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px] '>SEE PRODUCT</button> </Link>
+                        <Link  to='/zx9speaker'> <button className='px-4 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px] '>SEE PRODUCT</button> </Link>
                 </div>
             </div>
         </div>
