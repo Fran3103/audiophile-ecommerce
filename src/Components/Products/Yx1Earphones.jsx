@@ -88,7 +88,7 @@ const  Yx1Earphones = () => {
                         <h3 className="uppercase text-xl font-bold w-[50%] ">in the box</h3>
                         <div className="flex flex-col gap-2 ">
                             <p><span className="text-orange font-bold mr-3">2x</span>Earphone Unit</p>
-                            <p><span className="text-orange font-byx1-earx"></span>Multi-size Earplugs</p>
+                            <p><span className="text-orange font-bold mr-3">6x</span>Multi-size Earplugs</p>
                             <p><span className="text-orange font-bold mr-3">1x</span>User Manual</p>
                             <p><span className="text-orange font-bold mr-3">1x</span>USB-C Charging Cable</p>
                             <p><span className="text-orange font-bold mr-3">1x</span>Travel Pouch</p>
