@@ -3,8 +3,15 @@ import Navbar from "./Components/Navbar"
 import Home from "./Components/Home"
 import Earphones from "./Components/Home/category/Earphones"
 import Headphones from "./Components/Home/category/Headphones"
-import Speakers from "./Components/Home/category/Speakers"
+
 import Footer from "./Components/Home/Footer"
+import Speakers from "./Components/Home/category/Speakers"
+import XX99Mark2 from "./Components/Products/XX99Mark2"
+import Yx1Earphones from "./Components/Products/Yx1Earphones"
+import XX99Mark1 from "./Components/Products/XX99Mark1"
+import Zx7Speaker from "./Components/Products/Zx7Speaker"
+import Zx9Speaker from "./Components/Products/Zx9Speaker"
+import XX59 from "./Components/Products/XX59"
 
 
 function App() {
@@ -18,7 +25,15 @@ function App() {
         <Route path="/earphones" element={<Earphones/>}/>
         <Route path="/headphones" element={<Headphones/>}/>
         <Route path="/speakers" element={<Speakers/>}/>
-      </Routes>
+        <Route path="/xx99Mark2" element={<XX99Mark2/>}/>      
+        <Route path="/xx99Mark1" element={<XX99Mark1/>}/>      
+        <Route path="/yx1Earphones" element={<Yx1Earphones/>}/>      
+        <Route path="/zx9speaker" element={<Zx9Speaker/>}/>      
+        <Route path="/zx7speaker" element={<Zx7Speaker/>}/>      
+        <Route path="/xx59" element={<XX59/>}/>      
+        
+        
+        </Routes>
       <Footer/>
     </>
   )

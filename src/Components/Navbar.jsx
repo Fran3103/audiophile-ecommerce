@@ -17,7 +17,8 @@ const Navbar = () => {
         <nav className='bg-transparent p-7 m-auto  w-screen  max-w-[1100px]'>
             <div className='flex justify-between items-center max-w-3xl m-auto lg:hidden  w-full '>
                 <img src={menu} alt="menu" className='w-5 cursor-pointer' onClick={activar}/>
-                <img src={logo} alt="logo" className='md:mr-96 w-32' />
+                <Link to='/'><img src={logo} alt="logo" className='md:mr-96 w-32' /></Link>
+                
                 <img src={carrito} alt="carrito" className='w-5'/>
             </div>
 

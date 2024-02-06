@@ -28,7 +28,7 @@ const Headphones = () => {
                     <h3 className="text-orange tracking-[10px]">NEW PRODUCT </h3>
                     <h2 className="text-3xl mx-12 uppercase font-bold md:text-5xl md:mx-24 lg:mx-0 lg:text-left">XX99 Mark II Headphones</h2>
                     <p className="text-[12px] mx-9 md:text-lg lg:text-left lg:mx-0 ">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
-                    <Link  > <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px] '>SEE PRODUCT</button> </Link>
+                    <Link  to='/xx99Mark2'> <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px] '>SEE PRODUCT</button> </Link>
                 </div>
             </div>
             <div className="px-6 my-12 flex flex-col w-full lg:flex-row m-auto lg:gap-20   mt-20">
@@ -38,7 +38,7 @@ const Headphones = () => {
                 <div className="text-center flex flex-col justify-center items-center gap-4 mt-3 lg:items-start  ">
                     <h2  className="text-3xl mx-12 uppercase font-bold md:text-5xl md:mx-24 lg:mx-0 lg:text-left">XX99 Mark I Headphones </h2>
                     <p className="text-[12px] mx-9 md:text-lg lg:text-left lg:mx-0 ">As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.</p>
-                    <Link  > <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px]  '>SEE PRODUCT</button> </Link>
+                    <Link  to='/xx99Mark1' > <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px]  '>SEE PRODUCT</button> </Link>
                 </div>
             </div>
             <div className="px-6 my-12 flex flex-col w-full lg:flex-row m-auto lg:gap-20   mt-20">
@@ -48,7 +48,7 @@ const Headphones = () => {
                 <div className="text-center flex flex-col justify-center items-center gap-4 mt-3 lg:items-start  ">
                     <h2  className="text-3xl mx-12 uppercase font-bold md:text-5xl md:mx-24 lg:mx-0 lg:text-left">XX59 Headphones</h2>
                     <p className="text-[12px] mx-9 md:text-lg lg:text-left lg:mx-0 ">Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.</p>
-                    <Link  > <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px]  '>SEE PRODUCT</button> </Link>
+                    <Link  to='/xx59' > <button className='px-6 py-2 bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px]  '>SEE PRODUCT</button> </Link>
                 </div>
             </div>
         </div>

@@ -13,16 +13,16 @@ const Footer = () => {
                 <img src={logo} alt="logo" className='w-32 m-auto md:m-0' />
                 <ul className='flex flex-col items-center justify-center gap-6 text-xs md:text-[10px] tracking-[3px] md:flex-row  lg:w-full md:justify-start lg:justify-end'>
                     <li className='hover:text-orangeHover'>
-                        <Link>HOME</Link>
+                        <Link to='/'>HOME</Link>
                     </li>
                     <li className='hover:text-orangeHover'>
-                        <Link>HEADPHONE</Link>
+                        <Link to='/headphones'>HEADPHONE</Link>
                     </li>
                     <li className='hover:text-orangeHover'>
-                        <Link>SPEAKERS</Link>
+                        <Link to='/speakers'>SPEAKERS</Link>
                     </li>
                     <li className='hover:text-orangeHover'>
-                        <Link>EARPHONES</Link>
+                        <Link to='/earphones'>EARPHONES</Link>
                     </li>
                     
                 </ul>
