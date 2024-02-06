@@ -11,7 +11,7 @@ import zx9Mobile from '../../../assets/product-yx1-earphones/mobile/image-catego
 
 const Earphones = () => {
   return (
-    <div className="mt-16 max-w-[1100xp] w-screen m-auto flex flex-col justify-center ">
+    <div className="mt-16 max-w-[1100xp]  m-auto flex flex-col justify-center ">
         
             <h1 className="text-center bg-black p-8 text-3xl text-white font-medium tracking-[2px]">EARPHONES</h1>
         <div className="w-full max-w-[1100px] m-auto">

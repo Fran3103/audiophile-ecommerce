@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
           
             <div className='hidden lg:flex justify-between items-center max-w-7xl m-auto'>
-                <img src={logo} alt="logo" />
+                <Link to='/'><img src={logo} alt="logo" /></Link>
                 <ul className='text-white flex gap-8 font-font font-bold'>
                     <Link to='/' className='hover:text-orange'>HOME</Link>
                     <Link to='/headphones' className='hover:text-orange'>HEADPHONES</Link>

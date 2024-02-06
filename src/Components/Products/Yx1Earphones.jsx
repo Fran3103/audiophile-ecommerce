@@ -48,7 +48,7 @@ const  Yx1Earphones = () => {
 
 
   return (
-    <div className="mt-16 max-w-[1100xp]  w-screen m-auto flex flex-col justify-center ">
+    <div className="mt-16 max-w-[1100xp]  m-auto flex flex-col justify-center ">
         
         <div className="w-full max-w-[1100px] m-auto">
            <Link to='/earphones' ><p className="pt-12 pl-6">Go Back</p></Link>
