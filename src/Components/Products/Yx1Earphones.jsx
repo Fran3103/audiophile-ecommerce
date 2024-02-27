@@ -1,6 +1,6 @@
 
 import { useState } from "react"
-
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom"
 import Category from "../../Components/Home/Category"
 import BestGear from "../../Components/Home/BestGear"
@@ -155,5 +155,8 @@ const  Yx1Earphones = () => {
     </div>
   )
 }
-
+Yx1Earphones.propTypes = {
+    setProductos: PropTypes.func.isRequired,
+    productos: PropTypes.array.isRequired,
+  }
 export default Yx1Earphones

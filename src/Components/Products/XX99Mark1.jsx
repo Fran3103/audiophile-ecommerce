@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom"
 import Category from "../../Components/Home/Category"
 import BestGear from "../../Components/Home/BestGear"
@@ -35,7 +35,7 @@ import XX59Desktop from '../../assets/product-xx59-headphones/desktop/image-cate
 import XX59Tablet from '../../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg'
 import XX59Mobile from '../../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg'
 
-const XX99Mark1 = () => {
+const XX99Mark1 = ({setProductos, productos}) => {
 
     const [item, setItem] = useState(0)
 
@@ -43,6 +43,35 @@ const XX99Mark1 = () => {
     const restar = ()=> { 
     if(item > 0){ setItem(item -1)
     }}
+    const producto = {
+        'precio': 1750,
+        'titulo':'XX99 MK I',
+        'cantidad':item,
+        'img':productMobile
+
+}
+
+
+
+const añadir = () => {
+    // Verificar si el producto ya está en la lista
+   if(producto.cantidad > 0){ 
+    const productoExistente = productos.find(item => item.titulo === producto.titulo);
+
+    // Si el producto ya está en la lista, actualizar la cantidad
+    if (productoExistente) {
+        const nuevaLista = productos.map(item =>
+            item.titulo === productoExistente.titulo
+                ? { ...item, cantidad: item.cantidad + producto.cantidad }
+                : item
+        );
+        setProductos(nuevaLista);
+    }  
+        // Si el producto no está en la lista, agregarlo
+    else {
+    setProductos([...productos, producto]);}
+    }
+};
 
 
 
@@ -59,17 +88,17 @@ const XX99Mark1 = () => {
                     <img src={productMobile} alt="imagen de producto" className="hidden lg:block rounded-xl max-w-[540px]" />
 
                     <div className="text-left flex flex-col justify-center items-start gap-4 mt-3 lg:items-start  ">
-                        <h2 className="text-3xl uppercase font-bold md:text-5xl  lg:mx-0 lg:text-left">XX99 Mark I Headphones</h2>
+                        <h2 className="text-3xl uppercase font-bold md:text-5xl  lg:mx-0 lg:text-left">XX99 Mark Headphones I</h2>
                         <p className="text-base  md:text-lg lg:text-left lg:mx-0 ">As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.</p>
 
-                        <p className="font-bold">$ 1,750</p>
+                        <p className="font-bold">{producto.precio}</p>
                         <div className="flex items-center justify-start gap-4 w-full h-12">
                             <div className="flex items-center justify-around w-28 h-full bg-greyLight  ">
                                 <button className="text-grey text-xs font-bold" onClick={restar}>-</button>
                                 <p className="font-bold">{item}</p>
                                 <button className="text-grey text-xs font-bold" onClick={sumar}>+</button >
                             </div>
-                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] '>ADD TO CART</button>
+                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] ' onClick={añadir}>ADD TO CART</button>
                         </div>
                 </div>
                 </div>
@@ -151,5 +180,8 @@ const XX99Mark1 = () => {
     </div>
   )
 }
-
+XX99Mark1.propTypes = {
+    setProductos: PropTypes.func.isRequired,
+    productos: PropTypes.array.isRequired,
+  }
 export default XX99Mark1

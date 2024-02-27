@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 import { useState } from "react"
 
 import { Link } from "react-router-dom"
@@ -155,5 +155,8 @@ const Zx7Speaker = () => {
     </div>
   )
 }
-
+Zx7Speaker.propTypes = {
+    setProductos: PropTypes.func.isRequired,
+    productos: PropTypes.array.isRequired,
+  }
 export default Zx7Speaker

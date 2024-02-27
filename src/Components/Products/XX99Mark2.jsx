@@ -34,8 +34,9 @@ import Mark1Mobile from '../../assets/product-xx99-mark-one-headphones/mobile/im
 import XX59Desktop from '../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg'
 import XX59Tablet from '../../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg'
 import XX59Mobile from '../../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg'
+import PropTypes from 'prop-types';
 
-const XX99Mark2 = () => {
+const XX99Mark2 = ({setProductos, productos}) => {
 
     const [item, setItem] = useState(0)
 
@@ -44,7 +45,33 @@ const XX99Mark2 = () => {
     if(item > 0){ setItem(item -1)
     }}
 
+    const producto = {
+        'precio': 2999,
+        'titulo':'XX99 MK II ',
+        'cantidad':item,
+        'img':productMobile
 
+}
+
+const añadir = () => {
+    // Verificar si el producto ya está en la lista
+   if(producto.cantidad > 0){ 
+    const productoExistente = productos.find(item => item.titulo === producto.titulo);
+
+    // Si el producto ya está en la lista, actualizar la cantidad
+    if (productoExistente) {
+        const nuevaLista = productos.map(item =>
+            item.titulo === productoExistente.titulo
+                ? { ...item, cantidad: item.cantidad + producto.cantidad }
+                : item
+        );
+        setProductos(nuevaLista);
+    }  
+        // Si el producto no está en la lista, agregarlo
+    else {
+    setProductos([...productos, producto]);}
+    }
+};
 
   return (
     <div className="mt-16 max-w-[1100xp]   m-auto flex flex-col justify-center ">
@@ -60,17 +87,17 @@ const XX99Mark2 = () => {
 
                     <div className="text-left flex flex-col justify-center items-start gap-4 mt-3 lg:items-start  ">
                         <h3 className="text-orange tracking-[10px]">NEW PRODUCT </h3>
-                        <h2 className="text-3xl uppercase font-bold md:text-5xl  lg:mx-0 lg:text-left">XX99 Mark II Headphones</h2>
+                        <h2 className="text-3xl uppercase font-bold md:text-5xl  lg:mx-0 lg:text-left">XX99 Mark Headphones II</h2>
                         <p className="text-base  md:text-lg lg:text-left lg:mx-0 ">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.</p>
 
-                        <p className="font-bold">$ 2,999</p>
+                        <p className="font-bold">$ {producto.precio}</p>
                         <div className="flex items-center justify-start gap-4 w-full h-12">
                             <div className="flex items-center justify-around w-28 h-full bg-greyLight  ">
                                 <button className="text-grey text-xs font-bold" onClick={restar}>-</button>
                                 <p className="font-bold">{item}</p>
                                 <button className="text-grey text-xs font-bold" onClick={sumar}>+</button >
                             </div>
-                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] '>ADD TO CART</button>
+                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] ' onClick={añadir}>ADD TO CART</button>
                         </div>
                 </div>
                 </div>
@@ -153,5 +180,10 @@ const XX99Mark2 = () => {
     </div>
   )
 }
+
+XX99Mark2.propTypes = {
+    setProductos: PropTypes.func.isRequired,
+    productos: PropTypes.array.isRequired,
+  }
 
 export default XX99Mark2
