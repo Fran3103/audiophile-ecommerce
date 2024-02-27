@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <p className='m-auto text-center text-[12px] my-6'>Proyecto sacado de <a href="https://www.frontendmentor.io/home" className='text-grey'> Frontend Mentor.</a>    <span className='ml-3'>Realizado por</span>  <a href="https://www.linkedin.com/in/franco-aguirre-24855012a" target='Blank_' className='text-orange hover:text-orangeHover'>Franco Aguirre</a></p>
+        <p className='m-auto text-center text-[12px] my-6 p-12 md:p-0'>Proyecto sacado de <a href="https://www.frontendmentor.io/home" className='text-grey'> Frontend Mentor.</a>    <span className='ml-3'>Realizado por</span>  <a href="https://www.linkedin.com/in/franco-aguirre-24855012a" target='Blank_' className='text-orange hover:text-orangeHover'>Franco Aguirre</a></p>
     </div>
   )
 }
