@@ -3,9 +3,15 @@ import speakers from '../../assets/shared/desktop/image-category-thumbnail-speak
 import headphones from '../../assets/shared/desktop/image-category-thumbnail-headphones.png'
 import earphones from '../../assets/shared/desktop/image-category-thumbnail-earphones.png'
 import arrow from '../../assets/shared/desktop/icon-arrow-right.svg'
+import { useEffect } from 'react'
 
 
 const Category = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className='flex flex-col gap-5 lg:gap-12 items-center mb-12 md:flex-row md:justify-between md:mt-10 lg:mt-20  md:max-w-[700px]  lg:max-w-[1100px] m-auto'>
         <div className='flex flex-col justify-center items-center w-[327px] h-[165px]  bg-greyLight rounded py-3 mt-20  h-34 md:w-56 lg:w-[300px] lg:h-[200px] xl:w-[350px] xl:h-[200px]'>

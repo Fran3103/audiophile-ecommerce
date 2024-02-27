@@ -2,8 +2,14 @@ import imgMobile from '../../assets/home/mobile/image-earphones-yx1.jpg'
 import imgTablet from '../../assets/home/tablet/image-earphones-yx1.jpg'
 import imgDesktop from '../../assets/home/desktop/image-earphones-yx1.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Earphone = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className='flex flex-col  justify-center items-center gap-3 w-[327px]  md:w-[689px] lg:w-full lg:max-w-[1100px] m-auto md:flex-row mb-12'>
         <div className='w-full  md:w-[339px] md:h-[320px] lg:w-[540px] rounded-lg'>

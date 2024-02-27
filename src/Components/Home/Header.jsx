@@ -2,9 +2,15 @@ import imgMobile from '../../assets/home/mobile/image-header.jpg'
 import imgTablet from '../../assets/home/tablet/image-header.jpg'
 import imgDesktop from '../../assets/home/desktop/image-hero.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 const Header = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className='w-screen relative m-auto  max-w-fit'>
         <img src={imgDesktop} alt="desktop" className='hidden lg:flex w-full  m-auto' />
@@ -18,7 +24,7 @@ const Header = () => {
                     <h1 className='text-4xl mx-16 lg:ml-0 lg:mr-[400px] text-white font-font font-medium tracking-wide md:mx-8 md:text-6xl '>XX99 MARK II HEADPHONES</h1>
                     <p className='text-greyLigth font-font text-md mx-12  text-white md:mx-44 lg:ml-0 lg:mr-[750px]'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
 
-                    <Link  > <button className='px-8 py-3 bg-orange hover:bg-orangeHover text-white text-md font-font tracking-wide '>SEE PRODUCT</button> </Link>
+                    <Link to='/xx99Mark2' > <button className='px-8 py-3 bg-orange hover:bg-orangeHover text-white text-md font-font tracking-wide '>SEE PRODUCT</button> </Link>
                 </div>
 
             </div>
@@ -27,7 +33,7 @@ const Header = () => {
                     <h1 className='text-4xl mx-5 lg:ml-0 lg:mr-[400px] text-white font-font font-medium tracking-wide md:mx-8 md:text-6xl '>XX99 MARK II HEADPHONES</h1>
                     <p className='text-greyLigth font-font text-md text-white md:mx-44 lg:ml-0 lg:mr-[750px]'>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
 
-                    <Link  > <button className='px-8 py-3 bg-orange hover:bg-orangeHover text-white text-md font-font tracking-wide '>SEE PRODUCT</button> </Link>
+                    <Link  to='/xx99Mark2' > <button className='px-8 py-3 bg-orange hover:bg-orangeHover text-white text-md font-font tracking-wide '>SEE PRODUCT</button> </Link>
             </div>
         </div>
     </div>

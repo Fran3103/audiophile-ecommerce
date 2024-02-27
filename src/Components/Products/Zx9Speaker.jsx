@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { Link } from "react-router-dom"
 import Category from "../../Components/Home/Category"
@@ -37,7 +37,7 @@ import mark2Desktop from '../../assets/product-xx99-mark-two-headphones/desktop/
 import mark2Tablet from '../../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg'
 import mark2Mobile from '../../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg'
 
-const Zx7Speaker = () => {
+const Zx7Speaker = ({setProductos, productos}) => {
 
     const [item, setItem] = useState(0)
 
@@ -45,7 +45,37 @@ const Zx7Speaker = () => {
     const restar = ()=> { 
     if(item > 0){ setItem(item -1)
     }}
+    const producto = {
+        'precio': 1750,
+        'titulo':'Zx9',
+        'cantidad':item,
+        'img':productMobile
 
+}
+
+const añadir = () => {
+    // Verificar si el producto ya está en la lista
+   if(producto.cantidad > 0){ 
+    const productoExistente = productos.find(item => item.titulo === producto.titulo);
+
+    // Si el producto ya está en la lista, actualizar la cantidad
+    if (productoExistente) {
+        const nuevaLista = productos.map(item =>
+            item.titulo === productoExistente.titulo
+                ? { ...item, cantidad: item.cantidad + producto.cantidad }
+                : item
+        );
+        setProductos(nuevaLista);
+    }  
+        // Si el producto no está en la lista, agregarlo
+    else {
+    setProductos([...productos, producto]);}
+    }
+};
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
 
 
   return (
@@ -64,14 +94,14 @@ const Zx7Speaker = () => {
                         <h2 className="text-3xl uppercase font-bold md:text-5xl  lg:mx-0 lg:text-left">ZX9 SPEAKER</h2>
                         <p className="text-base  md:text-lg lg:text-left lg:mx-0 ">Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.</p>
 
-                        <p className="font-bold">$ 4,500</p>
+                        <p className="font-bold">$ {productos.precio}</p>
                         <div className="flex items-center justify-start gap-4 w-full h-12">
                             <div className="flex items-center justify-around w-28 h-full bg-greyLight  ">
                                 <button className="text-grey text-xs font-bold" onClick={restar}>-</button>
                                 <p className="font-bold">{item}</p>
                                 <button className="text-grey text-xs font-bold" onClick={sumar}>+</button >
                             </div>
-                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] '>ADD TO CART</button>
+                            <button className='px-6 h-full bg-orange hover:bg-orangeHover font-bold text-white text-xs font-font tracking-[2px] ' onClick={añadir}>ADD TO CART</button>
                         </div>
                 </div>
                 </div>
@@ -120,9 +150,9 @@ const Zx7Speaker = () => {
         <div>
             <h4 className="uppercase text-center font-bold text-2xl">you may also like</h4>
             <div className="w-full max-w-[1100px] m-auto px-4 flex flex-col my-12 gap-6 mb-20 md:flex-row md:px-3 md:gap-4 md:justify-center lg:justify-between">
-                <div className="text-center flex flex-col justify-center gap-2 mt-3  w-full  md:w-[223px] md:h-[471px] lg:w-[350px] ">
-                        <img src={zx7Mobile} alt="imagen de producto" className=" md:hidden  rounded-lg  h-[120px]  w-full" />
-                        <img src={zx7Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[318px] "/>
+                <div className="text-center flex flex-col justify-center items-center gap-2 mt-3  w-full  md:w-[223px] md:h-[471px] lg:w-[350px] ">
+                        <img src={zx7Mobile} alt="imagen de producto" className=" md:hidden  rounded-lg  h-[120px]  w-[300px]" />
+                        <img src={zx7Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[218px] "/>
                         <img src={zx7Desktop} alt="imagen de producto" className="hidden lg:block rounded-lg max-w-[350px]" />
                     
                         <h2 className="text-base  uppercase font-bold ">zx7 speaker</h2>
@@ -130,8 +160,8 @@ const Zx7Speaker = () => {
                         <Link  to='/zx7speaker'> <button className='px-4 py-2  bg-orange hover:bg-orangeHover text-white text-[10px] font-font tracking-[2px] '>SEE PRODUCT</button> </Link>
                 </div>
                 <div className="text-center flex flex-col justify-center items-center gap-2 mt-3  w-full  md:w-[223px] md:h-[471px] lg:w-[350px] ">
-                    <img src={Mark1Mobile} alt="imagen de producto" className=" md:hidden  rounded-xl  h-[120px]  w-full" />
-                    <img src={Mark1Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[318px] "/>
+                    <img src={Mark1Mobile} alt="imagen de producto" className=" md:hidden  rounded-xl  h-[120px]  w-[300px]" />
+                    <img src={Mark1Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[218px] "/>
                     <img src={Mark1Desktop} alt="imagen de producto" className="hidden lg:block rounded-xl max-w-[350px]"/>
                         <h2  className="text-base  uppercase font-bold ">XX99 Mark I  </h2>
                         
@@ -140,8 +170,8 @@ const Zx7Speaker = () => {
                 
                 
                 <div className="text-center flex flex-col justify-center items-center gap-2 mt-3 w-full  md:w-[223px] md:h-[471px] lg:w-[350px] ">
-                    <img src={mark2Mobile} alt="imagen de producto" className=" md:hidden  rounded-xl  h-[120px]  w-full" />
-                    <img src={mark2Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[318px] "/>
+                    <img src={mark2Mobile} alt="imagen de producto" className=" md:hidden  rounded-xl  h-[120px]  w-[300px]" />
+                    <img src={mark2Tablet} alt="imagen de producto"  className="hidden md:flex lg:hidden rounded-lg h-[218px] "/>
                     <img src={mark2Desktop} alt="imagen de producto" className="hidden lg:block rounded-xl max-w-[350px]" />
                         <h2  className="text-base  uppercase font-bold ">xx99 Mark II</h2>
         

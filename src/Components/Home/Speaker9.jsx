@@ -3,8 +3,14 @@ import imgTablet from '../../assets/home/tablet/image-speaker-zx9.png'
 import imgDesktop from '../../assets/home/desktop/image-speaker-zx9.png'
 import circles from '../../assets/home/desktop/pattern-circles.svg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Speaker9 = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className='w-[327px] h-[600px] md:w-[689px] md:h-[720px] lg:max-w-[1100px] lg:w-full lg:h-[560px]   bg-orange flex flex-col  lg:flex-row justify-center items-center gap-5  m-auto rounded-lg my-12 p-4 pb-12 lg:p-0 overflow-hidden' >
         <div className='relative w-full h-full  '>

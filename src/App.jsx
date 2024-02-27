@@ -41,7 +41,7 @@ function App() {
         <Route path="/zx9speaker" element={<Zx9Speaker productos={productos} setProductos={setProductos}  />}/>      
         <Route path="/zx7speaker" element={<Zx7Speaker productos={productos} setProductos={setProductos}  />}/>      
         <Route path="/xx59" element={<XX59 productos={productos} setProductos={setProductos} />}/>    
-        <Route path="/checkout" element={<Checkout productos={productos} total={total} />}/>  
+        <Route path="/checkout" element={<Checkout productos={productos} total={total} setProductos={setProductos}/>}/>  
         
         
         </Routes>

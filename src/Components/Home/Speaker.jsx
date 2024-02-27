@@ -3,8 +3,14 @@ import imgMobile from '../../assets/home/mobile/image-speaker-zx7.jpg'
 import imgTablet from '../../assets/home/tablet/image-speaker-zx7.jpg'
 import imgDesktop from '../../assets/home/desktop/image-speaker-zx7.jpg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Speaker = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className=' w-[327px]  md:w-[689px] lg:w-full lg:max-w-[1100px] bg-orange  relative m-auto rounded-lg mb-12'>
         <div className='flex flex-col items-start  gap-6 absolute top-24 left-9'>

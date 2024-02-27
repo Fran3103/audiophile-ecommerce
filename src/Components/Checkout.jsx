@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import check from "../assets/checkout/icon-order-confirmation.svg"
+import { useEffect } from "react";
 
-const Checkout = ({productos}) => {
+const Checkout = ({productos, setProductos}) => {
 
     const [activo, setActivo] = useState(false)
 
@@ -28,12 +29,24 @@ const Checkout = ({productos}) => {
     if( productos.length > 0){
 
         setActivo(!activo)}
+        window.scrollTo(0, 0);
+
     }
 
+    const finalizar = ()=> {
+        setProductos([])
+    }
+
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
+
+
   return (
-    <div className=' pt-24 px-4 bg-greyLight pb-12 '>
-        <Link to='/' className="hover:text-orangeHover"><h3>Go Back</h3></Link>
-        <div className=" flex flex-col  justify-center items-start gap-4 bg-white rounded-lg p-4 mt-3">
+    <div className=' pt-24 px-4 bg-greyLight pb-12  m-auto'>
+        <Link to='/' className="hover:text-orangeHover "><h3 className="lg:ml-[440px]">Go Back</h3></Link>
+        <div className=" flex flex-col  justify-center items-start gap-4 bg-white rounded-lg p-4 mt-3 max-w-[1000px] m-auto">
             <h1 className="font-bold text-xl">CHECKOUT</h1>
             <form action="#" className="flex flex-col w-full gap-4 mb-3">
                 <h2   className="text-orange  font-bold">BILLING DETAILS</h2>
@@ -81,7 +94,7 @@ const Checkout = ({productos}) => {
             </form>
 
         </div>
-        <div className=" flex flex-col  justify-center items-start gap-4 bg-white rounded-lg p-4 mt-3">
+        <div className=" flex flex-col  justify-center items-start gap-4 bg-white rounded-lg p-4 mt-3 max-w-[1000px] m-auto">
             <h2 className="font-bold text-xl">SUMMARY</h2>
             <div className="w-full flex flex-col gap-4">
                 {productos.map((producto) => { 
@@ -122,8 +135,8 @@ const Checkout = ({productos}) => {
         </div>
 
 
-        <div className={activo ? 'w-screen h-screen bg-[rgba(0,0,0,0.7)] top-0 left-0  absolute' : 'hidden'}>
-                <div className="w-[90%] bg-white absolute top-40 left-5 rounded-lg p-5 pb-12">
+        <div className={activo ? 'w-screen h-screen bg-[rgba(0,0,0,0.7)] top-0 left-0  absolute ' : 'hidden'}>
+                <div className="w-[90%] md:w-[60%] bg-white absolute top-40 left-5 lg:left-[34%] rounded-lg p-5 pb-12  max-w-[600px] m-auto" >
                     <img src={check} alt="orden confirmada" className="w-12 my-4" />
                     <h2 className="uppercase font-bold text-2xl my-2">thank you <br /> for your orden</h2>
                     <p className="text-grey my-3">You will receive an email confirmation shortly.</p>
@@ -152,7 +165,7 @@ const Checkout = ({productos}) => {
                             <p className="text-grey uppercase my-2 text-xs">Grand Total</p>
                             <p className="text-white ">$ {totalFinal}</p>
                         </div>
-                        <Link to='/' className="w-full h-12"><button  className=' w-full h-full bg-orange hover:bg-orangeHover text-white text-[12px] font-font tracking-[2px] duration-500 uppercase mt-4 '>back to home</button></Link>
+                        <Link to='/' onClick={finalizar} className="w-full h-12"><button  className=' w-full h-full bg-orange hover:bg-orangeHover text-white text-[12px] font-font tracking-[2px] duration-500 uppercase mt-4 '>back to home</button></Link>
                     </div>
                    
                 </div>
@@ -164,7 +177,7 @@ const Checkout = ({productos}) => {
 Checkout.propTypes = {
     
     productos: PropTypes.array.isRequired,
-   
+   setProductos: PropTypes.func.isRequired
   }
 
 export default Checkout

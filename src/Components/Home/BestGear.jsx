@@ -1,9 +1,15 @@
 import imgMobile from '../../assets/shared/mobile/image-best-gear.jpg'
 import imgTablet from '../../assets/shared/tablet/image-best-gear.jpg'
 import imgDesktop from '../../assets/shared/desktop/image-best-gear.jpg'
+import { useEffect } from 'react';
 
 const BestGear = () => {
+    useEffect(() => {
+        // Al cargar la página, desplazar hacia arriba
+        window.scrollTo(0, 0);
+    }, []);
   return (
+
     <div className='mb-12'>
         <div className='flex flex-col w-[327px]  md:w-[689px] lg:w-full lg:max-w-[1100px] lg:flex-row-reverse justify-center items-center m-auto gap-3'>
             <img src={imgMobile} alt="img persona" className=' md:hidden rounded-lg mb-4 ' />
